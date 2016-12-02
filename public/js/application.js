@@ -1,9 +1,11 @@
 $(document).ready(function () {
   $(".poem").on("click", function(event) {
     $that = $(this).parent().find("section")
-    // debugger;
     event.preventDefault();
     var url = $(this).children().attr("href")
+    if ($(".single-poem").length > 0) {
+      $(".single-poem").remove();
+    } else {
     $.ajax({
       url: url,
       method: "get",
@@ -13,5 +15,7 @@ $(document).ready(function () {
       console.log(response)
       $(response).appendTo($that)
     })
+
+    }
   })
 });
