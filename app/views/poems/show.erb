@@ -1,0 +1,8 @@
+<div class="container">
+  <h1><%= @poem.title %></h1>
+  
+  <% @poem.pretty_poem.each do |line| %>
+    <p> <%=line%> </p>
+  <% end %>
+
+</div>

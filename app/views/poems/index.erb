@@ -1,0 +1,14 @@
+<div class="container">
+ 
+ <h1>poems by e.e. cummings</h1>
+ <% if @poems %>
+  <% @poems.each do |poem| %>
+  <div>
+      <p class="poem"><a href='/poems/<%= poem.id %>'><%= poem.title %></a></p>
+      <section class="poem-text">
+      </section>
+  </div>
+    <% end %>
+ <% end %>
+
+</div>
