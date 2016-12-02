@@ -24,6 +24,7 @@ gem 'pry'
 
 gem 'pry-byebug'
 
+gem 'unsplash'
 
 group :development, :test do
   gem 'faker'
